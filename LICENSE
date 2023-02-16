@@ -1,4 +1,3 @@
-<<<<<<< HEAD
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -673,13 +672,3 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
-=======
-As mentioned previously, the 7G Firewall is entirely open source and free for all to use. The only requirement is that the following credit lines are included wherever 7G is used (note that version and date infos will vary):
-
-# 7G FIREWALL
-# @ https://perishablepress.com/7g-firewall/
-
-Other than that, it’s all yours!
-
-
->>>>>>> 2c6e67f (7G Firewall)

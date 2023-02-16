@@ -1,118 +1,56 @@
-# 7G FIREWALL - CHANGELOG
-# @ https://perishablepress.com/7g-firewall/
+# 8G FIREWALL CHANGEL0G
+# https://perishablepress.com/8g-firewall/
 
-
-# Feedback
 
 Report bugs @ https://perishablepress.com/contact/
 
 
+@ v1.3 20240222
 
-# Changelog
-
-@ v1.6 20230206
-
-- Removes "loopback" from Query String and Request URI rules
-- Note: "loopback" is used in WordPress Site Health requests
-- Removes "fck" from Query String rules
-- Note: "fck" is used in UTM requests
-- Removes "bitrix" from Request URI rules
-- Changes "semalt.com" to "semalt\.com" in Referrer rules
-- Removes "/mysql/" from Request URI rules
-- Removes "null" from Query String rules
-- Re-orders some of the lines/rules
-
-
-@ v1.5 20211103
-
-- Adds "eval(" to Query String
-- Removes "char" from Query String
-- Removes ".gz" from Request URI
-- Removes "exabot" from User Agents
-- Adds "javascript:" + variations to Request URI
-- Adds "header:" and "set-cookie:" + variations to Query String and Request URI
-- Removes "{" and "}" from Request URI
-- Removes "%" from Request URI
-- Improves "config" in Request URI
-- Removes "webconfig" from Request URI
-- Re-orders some of the Request URI rules
+- Takes out of beta testing
+- Adds "sftp.json" to Request URI rules
+- Removes "logins?" from Request URI rules
+- Improves Local File Inclusion (LFI) protection
+- Adds ".msi" to Request URI rules
+- Adds ".bat" to Request URI rules
+- Removes "wget" from User Agent rules
+- Removes "phpmyadmin" et al from Request URI rules
+- Removes "tmp" from Request URI rules
+- Replaces "php(.+)" with "php([^\/])" in Request URI rules
+- Adds "replace" to Command Injection Query String rules
+- Removes "blog" from Request URI rules
+- Replaces "demon" with "(\b)demon(\b)" in User Agent rules
+- Removes "cy_cho" from User Agent rules
+- Replaces "load_file" with "(\b)load_file" in Query String rules
+- Replaces "(wso)?1337" with "wso1337" in Request URI rules
+- Adds "awario" to User Agent rules
+- Replaces "backdorbot" with "backdor" User Agent rules
+- Replaces "blexbot" with "blex" User Agent rules
+- Removes "c99" from Query String rules
+- Removes "c99" from Request URI rules
+- Re-orders some rules/regex
 
 
-@ v1.4 20210821
+@ v1.2 20230423 (beta)
 
-- Adds "c99.php" to Request URI
-- Removes duplicates of "ckfinder"
-- Adds "libsoft.php" to Request URI
-- Removes "ambien" from Referrer rules
-- Changes "conf(ig)?" to "conf\b|config|"
-- Changes "configbak" to "config(\.)?bak"
-- Removes "order" from Query String rules
-- Removes "360Spider" from User Agent rules
-- Removes "seznambot" from User Agent rules
-- Escapes two instances of square brackets "["
-- Replaces "_?php-?my-?admin" with "_?php-my-admin"
-- Adds to Request URI: "marg.php" and "3index.php"
-- Adds to Request URI and Referrer, rule to protect against SQL injection
-- Moves "ahrefs", "alexibot", "majestic", "mj12bot", "rogerbot" to their own line
-- Adds "econtext", "eolasbot", "eventures", "liebaofast", "nominet", "oppo\sa33", "petalbot" to User Agent rules
-- Adds to Request URI: ".ace", ".ashx", ".bin", ".conf(ig)?", ".dist", ".engine", ".env", ".git", ".gz", ".make", ".module", ".orig", ".phtml", ".profile", ".save", ".svn", ".swo", ".theme", ".xtmpl", ".ya?ml"
+- Removes "L" flag from core rewrite rules
+- Improves "(boot)" regex in Request URI rules
+- Improves "ckeditor" regex in Query String & Request URI
+- Fixes incorrect flag value in Cookie logging rewrite rule
+- Removes "/admin/" from Request URI rules
+- Adds "x00" to Referrer rules
+- Re-orders some rules/regex
 
 
-@ v1.3 20200903
+@ v1.1 20230214 (beta)
 
-- Reorders some rules
-- Replaces L flag with END for logging rules
-- Renames log files and updates logging rules
-- Removes logging loop-protection rules
-- Adds "masscan" to User Agents
-- Adds to Query String: "user_func_array" and "phpinfo"
-- Adds "$_FILES", "$_GET", "$_POST" to Query String
-- Adds "@copy" to Query String
-- Adds "file_put_contents" to Query String
-- Adds "vuln.php" to Request URI
-- Adds "curl_exec" to Query String and Request URI
-- Removes "exec" from Query String and Request URI
-- Removes "cialis" from HTTP Referrer
-- Removes "seznambot" from User Agents
-- Removes "load_file" from Query String
-- Removes DELETE and PUT from Request Methods
-- Removes lone comma match "," from Request URI
-- Removes "ucp" from Request URI
-- Removes "system" directory match from Request URI
-- Removes match for "http(s)://" in the Query String
-- Removes "%[a-z0-9]{0,2}" from "globals" pattern in Query String
-- Removes square brackets "[", "]" from Request URI
-- Removes the tilde character "~" from Query String and Request URI
-- Removes "/sql/" from Request URI
-- Removes ".conf(ig)?" from Request URI
-- Removes "fck" from Query String
-- Replaces "{0,2}" with "{2,}" in Query String request pattern
+- Improves regex for config rules
+- Improves regex for .php(+) extension
+- Adds mopub.com to Referrer rules
+- Re-orders some rules/regex
 
 
-@ v1.2 20190727
-
-- Replaces dot . wildcard with .*
-- Removes "gz" and "zip" from list of blocked file types
-- Removes "revslider" from Query String and Request URI
-- Adds "\)|%29" to JavaScript rule in Query String
-- Adds "::[0-9999]|%3a%3a[0-9999]" to localhost rule in Request URI
-- Adds rule for ".ftpconfig", "sftp-config.", et al to Request URI
-- Adds exabot, ahrefs, mj12bot, seznambot to User Agent
-- Removes "fread" from Query String
-- Removes match for "/php/" in Request URI
-- Removes "manage" from Request URI
-- Removes "(uration)?" from Query String
-
-
-@ v1.1 20190204
-
-- Escapes "[" in Query String (line 27)
-- Removes "system" from Query String (line 47)
-- Removes "setup" from Request URI (line 88)
-- Removes "install" from Request URI (line 88)
-- Removes exabot, ahrefs, mj12bot, archive.org, seznambot
-
-
-@ v1.0 20190124
+@ v1.0 0230209 (beta)
 
 - Initial release
+
